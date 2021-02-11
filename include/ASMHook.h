@@ -3,7 +3,7 @@
 #ifdef __cplusplus
 extern "C" { 
 #endif
-	void __cdecl InstallHook(unsigned int address, void* pDetour, size_t size, void** trampoline);
+	void __cdecl InstallHook(void*, void* pDetour, size_t size, void** trampoline);
 #ifdef __cplusplus
 }
 #endif
