@@ -20,7 +20,7 @@ FillMemory PROC
 	push ebp
 	mov ebp, esp
 	sub esp, 04h
-	lea eax, [esp]
+	mov eax, esp
 	push eax
 	push PAGE_EXECUTE_READWRITE
 	push [ebp+0010h]
@@ -31,7 +31,7 @@ FillMemory PROC
 	push [ebp + 08h] ; address
 	call memset
 	sub esp, 0Ch
-	lea eax, [esp]
+	mov eax, esp
 	push eax
 	push eax
 	push [ebp+0010h]
